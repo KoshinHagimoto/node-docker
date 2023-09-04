@@ -14,9 +14,8 @@ services:
       - ./mysql/init:/docker-entrypoint-initdb.d
       - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
   nodejs:
-    image: node:12
+    build: .
     ports:
       - "3000:3000"
     volumes:
       - ./backend:/var/backend
-    command: node /var/backend/bin/www
