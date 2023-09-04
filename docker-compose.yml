@@ -18,5 +18,5 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./app:/var/app
-    command: node /var/app/bin/www
+      - ./backend:/var/backend
+    command: node /var/backend/bin/www
